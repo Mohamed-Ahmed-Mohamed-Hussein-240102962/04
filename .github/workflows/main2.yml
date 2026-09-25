@@ -1,0 +1,8 @@
+name: new_for_me
+on: issues
+jobs:
+  x:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print_issue_detials
+        run : ${{ toJson(github.event.issue)}}
