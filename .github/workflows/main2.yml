@@ -6,5 +6,5 @@ jobs:
     steps:
       - name: print_issue_detials
         env:
-          Y:  ${{ toJson(github.event.issue)}}
-        run : $Y
+          Y: ${{ toJson(github.event.issue)}}
+        run : echo "$Y"
