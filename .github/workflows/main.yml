@@ -1,0 +1,24 @@
+name: all
+on: push
+jobs:
+  x:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./04+Practice+Project+(Start)(1)/04 Practice Project (Start)
+    steps:
+      - name: checkout
+        uses: actions/checkout@v7
+      - name: nodeinstall
+        uses: actions/setup-node@v7
+        with:
+           node-version: 20
+      - name: intallations
+        run: npm install
+      - name: lint
+        run: npm run lint
+      - name: test
+        run: npm run test
+      - name: build
+        run: npm run build
